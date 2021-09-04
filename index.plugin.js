@@ -1,6 +1,6 @@
 /**
  * @name Index
- * @version 1.0.0
+ * @version 1.2.0
  * @authorLink https://twitter.com/Amukh1_Dev
  * @website https://amukh1.github.io/amukh1dev/
  * @source https://raw.githubusercontent.com/amukh1/plugin01/main/index.plugin.js

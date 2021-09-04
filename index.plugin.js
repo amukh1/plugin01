@@ -1,6 +1,6 @@
 /**
  * @name Index
- * @version 1.2.0
+ * @version 1.0.0
  * @authorLink https://twitter.com/Amukh1_Dev
  * @website https://amukh1.github.io/amukh1dev/
  * @source https://raw.githubusercontent.com/amukh1/plugin01/main/index.plugin.js
@@ -40,7 +40,7 @@ module.exports = (() => {
             ],
             github_raw: "https://raw.githubusercontent.com/<user>/<repo>/<branch>/<path>/<to>/<file>.plugin.js",
             version: "1.0.0",
-            description: "Index plugin"
+            description: "Index pluginn"
         }
     }
     return !global.ZeresPluginLibrary ? class {

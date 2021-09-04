@@ -1,7 +1,10 @@
 /**
- * @name        PluginName
- * @displayName PluginName
- * @author      AuthorName
+ * @name        index
+ * @displayName index
+ * @author      amukh1
+ * @authorLink https://twitter.com/IAmZerebos
+ * @website https://amukh1.github.io/amukh1dev/
+ * @source https://raw.githubusercontent.com/amukh1/plugin01/main/index.plugin.js
 */
 /*@cc_on
 @if (@_jscript)
@@ -28,23 +31,24 @@
 module.exports = (() => {
     const config = {
         info: {
-            name: "Plugin Name",
+            name: "index",
             authors: [
                 {
-                    name: "Author Name",
-                    discord_id: "Author ID"
+                    name: "amukh1",
+                    discord_id: "696953667403644938"
                 }
             ],
-            github_raw: "https://raw.githubusercontent.com/<user>/<repo>/<branch>/<path>/<to>/<file>.plugin.js",
-            version: "Plugin Version",
-            description: "Plugin Description"
+            github_raw: "https://raw.githubusercontent.com/amukh1/plugin01/main/index.plugin.js",
+            version: "1.0.0",
+            description: "index description index description index description index description index description index description index description index description index description"
         }
     }
     return !global.ZeresPluginLibrary ? class {
         constructor() { this._config = config }
         load() {
             BdApi.showConfirmationModal("Library plugin is needed", 
-            [`The library plugin neede∂d for ${config.info.name} is missing. Please click Download Now to install it.`], {
+            [`The library plugin needed for ${config.info.name} is missing. Please click Download Now to install it.`], {
+                danger: true,
                 confirmText: "Download",
                 cancelText: "Cancel",
                 onConfirm: () => {

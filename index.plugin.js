@@ -49,7 +49,7 @@ module.exports = (() => {
                 }
             ],
             github_raw: "https://raw.githubusercontent.com/amukh1/plugin01/main/index.plugin.js",
-            version: "1.0.0",
+            version: "1.0.1",
             description: "Description"
         },
         "changeLog": {

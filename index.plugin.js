@@ -6,6 +6,16 @@
  * @website https://amukh1.github.io/amukh1dev/
  * @source https://raw.githubusercontent.com/amukh1/plugin01/main/index.plugin.js
 */
+
+ /**
+     * @interface
+     * @name module:Modals~Changelog
+     * @property {string} title - title of the changelog section
+     * @property {string} [type=added] - type information of the section. Options: added, improved, fixed, progress.
+     * @property {Array<string>} items - itemized list of items to show in that section. Can use markdown.
+     */
+
+
 /*@cc_on
 @if (@_jscript)
     
@@ -40,9 +50,16 @@ module.exports = (() => {
             ],
             github_raw: "https://raw.githubusercontent.com/amukh1/plugin01/main/index.plugin.js",
             version: "1.0.0",
-            description: "index description index description index description index description index description index description index description index description index description"
-        }
-    }
+            description: "Description"
+        },
+        "changeLog": {
+			"fixed": {
+				"Status/Overflow": "Fixed some Issues with very long Status causing overflow issues"
+			}
+		}
+	}
+    
+    
     return !global.ZeresPluginLibrary ? class {
         constructor() { this._config = config }
         load() {
@@ -58,8 +75,19 @@ module.exports = (() => {
                 }
             })
         }
+
+
+       
+
+
         start() {}
+
+       
+
         stop() {}
+        
+
+
     } : (([Plugin, Api]) => {
         const plugin = (Plugin, Api) => {
             return class PluginName extends Plugin {
@@ -67,8 +95,16 @@ module.exports = (() => {
                     // onStart code
                 }
                 onStop() {
-                    // onStop code
+                    BdApi.alert('Goodbye..', 'This is farewell. :(')
                 }
+                getSettingsPanel() {
+                    return BdApi.React.createElement("p", {
+                        style: {
+                            color: "White",
+                        }
+                    }, "Hello! No settings yet :(")
+                }
+            
             }
         }
         return plugin(Plugin, Api)
